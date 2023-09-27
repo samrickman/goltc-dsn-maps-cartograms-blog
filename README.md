@@ -1,21 +1,21 @@
 # Creating interactive maps and cartograms with R and Javascript
 
-This is the repo for a blog post which is part of the _Communicating the findings of long-term care research_ series for the [Data Science Interest Group](https://goltc.org/interest-group/data-science/) of the [Global Observatory of Long Term Care](https://goltc.org/).
+This is the repo for a blog post which is part of the _Communicating the findings of long-term care research_ series for the [Data Science Interest Group](https://goltc.org/interest-group/data-science/) of the [Global Observatory of Long Term Care](https://goltc.org/). The actual blog post can be viewed [here]().
 
 ## Reproducibility
 
-This blog post is created using public data and can reproduced. You will need [Quarto](https://quarto.org/), R and the [`renv`](https://rstudio.github.io/renv/articles/renv.html) package. This will ensure you have the required version of the R packages contained in the [`renv.lock`](./renv.lock) file.
+This blog post is created using public data and can reproduced. You will need [Quarto](https://quarto.org/), [R](https://www.r-project.org/) and the [`renv`](https://rstudio.github.io/renv/articles/renv.html) package. This will ensure you have the required version of the R packages contained in the [`renv.lock`](./renv.lock) file.
 
 To reproduce the blog post from the original data, `git clone` this repo and run the R file [`./1__create_html_from_qmd.R`](./1__create_html_from_qmd.R). This will:
 
 1. Ensure that you have `renv` and the required version of the R packages installed.
 2. Recreate the US election map and cartogram at the start of the blog post. These are the only maps which are not created within the html file, as generating a population-weighted Dorling cartogram of all US counties takes about 15 minutes.
-3. Generate the html file from `GoLTC-maps-cartograms-blog-post.qmd`, using the versions of the R packages set out in `renv.lock`.
+3. Generate the html file from `GoLTC-maps-cartograms-blog-post.qmd`, using the versions of the R packages set out in `renv.lock`. The `renv.lock` contains the R dependencies and versions. The Quarto version is [`1.4.268`](https://github.com/quarto-dev/quarto-cli/releases/tag/v1.4.288).
 
 The output will be:
 
 1. `GoLTC--maps-cartograms-blog-post.html`. This is the actual html file.
-2. `./GoLTC-maps-cartograms-blog-post_files/`. The folder
+2. `./GoLTC-maps-cartograms-blog-post_files/`. The folder with the javascript dependencies.
 
 To view the file as it appears on the web, move the html file and the subfolder to a public or local web server (e.g. Node [live server](https://www.npmjs.com/package/live-server) or Python [SimpleHttpServer](https://www.digitalocean.com/community/tutorials/python-simplehttpserver-http-server)). Your web server should have the following file structure:
 
