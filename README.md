@@ -6,7 +6,7 @@ This is the repo for a blog post which is part of the _Communicating the finding
 
 This blog post is created using public data and can reproduced. You will need [Quarto](https://quarto.org/), R and the [`renv`](https://rstudio.github.io/renv/articles/renv.html) package. This will ensure you have the required version of the R packages contained in the [`renv.lock`](./renv.lock) file.
 
-To reproduce the blog post from the original data, `git clone` this repo and run the R file [./1\_\_create_html_from_qmd.R](./1__create_html_from_qmd.R). This will:
+To reproduce the blog post from the original data, `git clone` this repo and run the R file [`./1__create_html_from_qmd.R`](./1__create_html_from_qmd.R). This will:
 
 1. Ensure that you have `renv` and the required version of the R packages installed.
 2. Recreate the US election map and cartogram at the start of the blog post. These are the only maps which are not created within the html file, as generating a population-weighted Dorling cartogram of all US counties takes about 15 minutes.
