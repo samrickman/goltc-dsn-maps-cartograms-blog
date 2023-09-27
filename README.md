@@ -4,7 +4,7 @@ This is the repo for a blog post which is part of the _Communicating the finding
 
 ## Reproducibility
 
-This blog post is created using public data and can reproduced. You will need [Quarto](https://quarto.org/), R and all the R packages contained in the (`renv.lock`)[./renv.lock] file.
+This blog post is created using public data and can reproduced. You will need [Quarto](https://quarto.org/), R and all the R packages contained in the [`renv.lock`](./renv.lock) file.
 
 `1.4.268`
 
