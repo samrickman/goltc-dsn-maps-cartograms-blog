@@ -25,8 +25,11 @@ create_directories <- function(dirs = c("./csv", "./img", "./raw_data")) {
     invisible(NULL)
 }
 
+if (!require("renv")) install.packages("renv")
+
 create_renv()
 create_directories()
+
 
 # Clean US election data (takes about 10 seconds to run)
 message("Cleaning US election data...")
