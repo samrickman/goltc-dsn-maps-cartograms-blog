@@ -1,6 +1,6 @@
 # Creating interactive maps and cartograms with R and Javascript
 
-This is the repo for a blog post which is part of the _Communicating the findings of long-term care research_ series for the [Data Science Interest Group](https://goltc.org/interest-group/data-science/) of the [Global Observatory of Long Term Care](https://goltc.org/). The actual blog post can be viewed [here](http://142.93.32.140/goltc/GoLTC-maps-cartograms-blog-post.html).
+This is the repo for a blog post which is part of the _Communicating the findings of long-term care research_ series for the [Data Science Interest Group](https://goltc.org/interest-group/data-science/) of the [Global Observatory of Long Term Care](https://goltc.org/). The actual blog post can be viewed [here](https://goltc.org/wp-content/uploads/r-charts/GoLTC-maps-cartograms-blog-post.html).
 
 ## Reproducibility
 
