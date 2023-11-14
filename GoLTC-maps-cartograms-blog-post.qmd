@@ -141,6 +141,10 @@ create_us_map <- function(dat, elementId, zoom = 4.25, stroke = FALSE, pal = c("
 
     # Base map
     leaflet_map <- st_transform(dat, "EPSG:4326") |>
+    dplyr::mutate(label = paste(
+                area, "<br>",
+                "Population:", scales::label_comma()(pop)
+            ))  |>    
         leaflet(
             options = leafletOptions(
                 zoomSnap = 0.5, zoomDelta = 0.5
@@ -152,7 +156,7 @@ create_us_map <- function(dat, elementId, zoom = 4.25, stroke = FALSE, pal = c("
             weight = 1,
             color = "black",
             fillColor = ~ unname(pal[winner]),
-            label = ~area,
+            label = ~lapply(label, htmltools::HTML),
             fillOpacity = 1
         ) |>
         addProviderTiles(providers$CartoDB.DarkMatter) |>
