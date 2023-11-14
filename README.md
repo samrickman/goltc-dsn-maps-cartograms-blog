@@ -42,7 +42,7 @@ For information, the steps that this script automates are:
 
 # Hosting
 
-To view the file as it appears on the web, move the html file and the `./GoLTC-maps-cartograms-blog-post_files` subfolder to a public or local web server (e.g. Node [live server](https://www.npmjs.com/package/live-server) or Python [SimpleHttpServer](https://www.digitalocean.com/community/tutorials/python-simplehttpserver-http-server)). Your web server should have the following file structure:
+To view the file as it appears on the web, move the html file and the `./GoLTC-maps-cartograms-blog-post_files/` and `./img/` subfolders to a public or local web server (e.g. Node [live server](https://www.npmjs.com/package/live-server) or Python [SimpleHttpServer](https://www.digitalocean.com/community/tutorials/python-simplehttpserver-http-server)). Your web server should have the following file structure:
 
 ## Standard Quarto output (without running `3__remove_hardcoded_data.py`)
 
