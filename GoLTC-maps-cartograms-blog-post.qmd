@@ -155,7 +155,7 @@ create_us_map <- function(dat, elementId, zoom = 4.25, stroke = FALSE, pal = c("
             label = ~area,
             fillOpacity = 1
         ) |>
-        addProviderTiles(providers$Stamen.TonerBackground) |>
+        addProviderTiles(providers$CartoDB.DarkMatter) |>
         setView(lat = 37.8, lng = -98, zoom = zoom) |>
         addLegend(
             position = "bottomleft",
