@@ -119,7 +119,7 @@ library(sf)
 
 
 us_polygons <- readRDS("./csv/us_election_shp_counties.rds")
-cart_dorling <- readRDS("./csv/us_cart_dorling_k1.rds")
+cart_dorling <- readRDS("./csv/us_cart_dorling_k1_min.rds")
 
 
 # Function to generate the Leaflet maps in this post

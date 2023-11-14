@@ -5,20 +5,23 @@ library(cartogram)
 
 us <- readRDS("./csv/us_election_shp_counties.rds")
 
-# # that's it basically
-# us_map <- tm_shape(us) +
-#     tm_fill(
-#         col = "winner",
-#         palette = c("Democrat" = "#0015BC", "Republican" = "#e81b23"),
-#         legend.show = FALSE
-#     ) + tm_layout(
-#         main.title = "Map and cartogram of US 2020 election results",
-#         main.title.position = "center"
-#     )
-
+us_min  <- us  |>
+    st_simplify(
+        preserveTopology = TRUE,
+        dTolerance = 1000
+    )
 
 # * Dorling cartogram
 cart_dorling <- st_transform(us, "EPSG:3857") |>
     cartogram_dorling(weight = "pop", k = 1, m_weight = 0.4)
 
+# This ends up being 13mb as json in the html file
+# We can make it about 2mb by simplifying polygons
+cart_dorling_min  <- cart_dorling  |>
+    st_simplify(
+    preserveTopology = TRUE,
+    dTolerance = 1000
+)
+
 saveRDS(cart_dorling, "./csv/us_cart_dorling_k1.rds")
+saveRDS(cart_dorling_min, "./csv/us_cart_dorling_k1_min.rds")
